@@ -2,8 +2,14 @@ import requests
 
 man_clothes = {
     'man_clothes_cat': {
-        'trousers': '8144',
-        'jacket': '63011'
+        'trousers': {
+            'cat': '8144',
+            'tag': 'men_clothes1'
+        },
+        'jacket': {
+            'cat': '63011',
+            'tag': 'men_clothes1'
+        }
     }
 }
 
