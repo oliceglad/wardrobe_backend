@@ -17,9 +17,13 @@ def check_name(name):
 
 class ParseWB:
     @staticmethod
-    def get_category(category):
-        url = f'https://catalog.wb.ru/catalog/{man["man_clothes_cat"][category]["tag"]}/catalog?appType=1&cat={man["man_clothes_cat"][category]["cat"]}&curr=rub&dest=-1257786&regions=80,38,83,4,64,33,68,70,30,40,86,75,69,22,1,31,66,110,48,71,114&sort=popular&spp=0'
-        response = requests.get(url=url)
+    def get_category(category, gender):
+        if gender == 'woman':
+            url = f'https://catalog.wb.ru/catalog/{category}/catalog?appType=1&cat={woman["cat"][category]}&curr=rub&dest=-1257786&regions=80,38,83,4,64,33,68,70,30,40,86,75,69,1,31,66,22,110,48,71,114&sort=popular&spp=0'
+        else:
+            url = f'https://catalog.wb.ru/catalog/{man["man_clothes_cat"][category]["tag"]}/catalog?appType=1&cat={man["man_clothes_cat"][category]["cat"]}&curr=rub&dest=-1257786&regions=80,38,83,4,64,33,68,70,30,40,86,75,69,22,1,31,66,110,48,71,114&sort=popular&spp=0'
+        print(url)
+        response = requests.get(url = url)
 
         return ParseWB.prepare_items(response.json())
 
@@ -37,7 +41,7 @@ class ParseWB:
                     'name': check_name(product['name']),
                     'brand': product['brand'],
                     'price': product['salePriceU'] // 100,
-                    'url': f'https://www.wildberries.ru/catalog/{product["id"]}/detail.aspx'
+                    'url': f'https://www.wildberries.ru/catalog/{product["id"]}/detail.aspx',
                 }
             )
             i += 1

@@ -13,7 +13,8 @@ get_goods = ParseWB.get_category
 class WbGoods(Resource):
     def get(self):
         category = request.args.get('category')
-        return {'data': get_goods(category)}
+        gender = request.args.get('gender')
+        return {'data': get_goods(category, gender)}
 
 api.add_resource(WbGoods, '/goods')
 

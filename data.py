@@ -12,8 +12,17 @@ class DataGender:
         }
     }
 
-    woman_clothes = {
-        'woman_clothes_cat': {
 
+    woman_clothes = {
+        'cat': {
+            'bl_shirts': '8126',
+            'pants': '8127',
+            'outwear1': '63010',
+            'jumpers_cardigans': '8130',
+            'jeans': '8131',
+            'sweatshirts_hoodies': '8140',
+            'tops_tshirts1': '8142',
+            'shorts': '10567',
+            'skirts': '8143',
         }
     }
