@@ -18,6 +18,3 @@ class WbGoods(Resource):
         return {'data': get_goods(category, gender, count)}
 
 api.add_resource(WbGoods, '/goods')
-
-if __name__ == '__main__':
-    app.run(debug=True)
