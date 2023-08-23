@@ -8,6 +8,34 @@ class DataGender:
             'jacket': {
                 'cat': '63011',
                 'tag': 'men_clothes1'
+            },
+            'jeans': {
+                'cat': '8149',
+                'tag': 'men_clothes2'
+            },
+            'tops_tshirts1': {
+                'cat': '129176',
+                'tag': 'men_clothes3'
+            },
+            'blazer': {
+                'cat': '8155',
+                'tag': 'men_clothes3'
+            },
+            'bl_shirts': {
+                'cat': '8156',
+                'tag': 'men_clothes3'
+            },
+            'sweatshirts_hoodies': {
+                'cat': '8158',
+                'tag': 'men_clothes4'
+            },
+            't_shirts': {
+                'cat': '8159',
+                'tag': 'men_clothes6'
+            },
+            'shorts': {
+                'cat': '11428',
+                'tag': 'men_clothes5'
             }
         }
     }
