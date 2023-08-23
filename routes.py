@@ -14,7 +14,8 @@ class WbGoods(Resource):
     def get(self):
         category = request.args.get('category')
         gender = request.args.get('gender')
-        return {'data': get_goods(category, gender)}
+        count = request.args.get('count')
+        return {'data': get_goods(category, gender, count)}
 
 api.add_resource(WbGoods, '/goods')
 
