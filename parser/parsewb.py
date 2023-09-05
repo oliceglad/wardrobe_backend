@@ -17,7 +17,7 @@ def check_name(name):
 
 class ParseWB:
     @staticmethod
-    def get_category(category, gender, count):
+    def get_category(category, gender = 'man', count = 50):
         if gender == 'woman':
             url = f'https://catalog.wb.ru/catalog/{category}/catalog?appType=1&cat={woman["cat"][category]}&curr=rub&dest=-1257786&regions=80,38,83,4,64,33,68,70,30,40,86,75,69,1,31,66,22,110,48,71,114&sort=popular&spp=0'
         else:

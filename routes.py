@@ -15,6 +15,8 @@ class WbGoods(Resource):
         category = request.args.get('category')
         gender = request.args.get('gender')
         count = request.args.get('count')
-        return {'data': get_goods(category, gender, count)}
+        if gender and count:
+            return {'data': get_goods(category, gender, count)}
+        return {'data': get_goods(category)}
 
 api.add_resource(WbGoods, '/goods')
